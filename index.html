@@ -1,42 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Harry Potter</title>
-    <script src="main.js"></script>
+    <meta charset="utf-8">
+    <title>Harry Potter API</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<form action="http://localhost:3033/profesores" method="post">
-    <input type="hidden" name="oculto" value="123">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Dime tu nombre"></input>
-    <br>
-    <label for="isActive">Está dando clases ahora:</label>
-    <input type="checkbox" id="isActive" name="activo"></input>
-    <br>
-    <label for="alta">Fecha de alta:</label>
-    <input type="date" id="alta" name="alta"></input>
-    <br>
-    Asignaturas:
-    <select name="asignaturas" id="asignatura">
-        <option value="0" selected>Ninguna</option>
-        <option value="1">Programación</option>
-        <option value="2">Redes</option>
-    </select>
-    <br>
-    <input type="password" name="passwd"></input>
-    <br><br>
-    <input type="button" id="guardarProfe" value="Enviar"></input>
-    <!--<button type="submit">Enviar</button>-->
-    <button type="clear">Limpiar</button>
-</form>
-
-<div>
-    <h1>Listado de profesores</h1>
-    <input type="button" id="reloadProfes" value="Recargar">
-    <ul id="profesores"></ul>
-</div>
-
+<header>
+    <h1>Harry Potter API</h1>
+    <nav>
+        <ul>
+            <li><a href="/peliculas">Películas</a></li>
+            <li><a href="/personajes">Personajes</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>Bienvenido a la API de Harry Potter</h2>
+    <p>Selecciona una de las opciones de la barra de navegación para comenzar.</p>
+</main>
+<footer>
+    <p>&copy; 2023 Harry Potter API</p>
+</footer>
 </body>
 </html>
