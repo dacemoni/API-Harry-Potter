@@ -11,27 +11,27 @@ Colecciones (ver objetos para sus columnas):
 Endpoints (todos con GET, POST, PUT y DELETE)
 
 /peliculas 
+
 /personajes
+
 /peliculas/:id
+
 /personajes/:id
+
 /peliculas/:id/personajes
 
 Objetos:
 
 PELICULA: {
-
     id,
     title,
     length,
     year
-
 }
 
 PERSONAJE: {
-
     id,
     name
-
 }
 
 ### Web
