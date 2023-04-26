@@ -13,16 +13,13 @@ El API almacenará los datos persistentes en una base de datos MySQL o MariaDB (
 
 ### API REST
 
-El API debe ofrecer un CRUD completo sobre las colecciones:
+El API debe ofrecer un CRUD completo sobre las colecciones: Películas y Personajes.
 
-/peliculas
-/personajes
+Los métodos HTTP a utilizar deberán ser los adecuados para cada operación. Además, se ofrecerá la consulta en las colecciones:
 
-Los métodos HTTP a utilizar deberán ser los adecuados para cada operación.
-Además, se ofrecerá la consulta en las colecciones:
-
-/peliculas/:idPelicula/personajes - Mostrar los personajes de la película
-/personajes/:idPersonajes/peliculas - Mostrar las películas dónde sale el personaje
+   /peliculas/:idPelicula/personajes - Mostrar los personajes de la película
+   
+   /personajes/:idPersonajes/peliculas - Mostrar las películas dónde sale el personaje
 
 Objetos:
 
