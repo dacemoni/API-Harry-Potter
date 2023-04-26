@@ -1,17 +1,17 @@
 # EJERCICIO: API REST - Harry Potter
 
-### Introducción
+## Introducción
 
 El alumno implementará un API REST con Node.JS que complete la especificación indicada en el presente documento.
 
-### Base de datos
+## Base de datos
 
 El API almacenará los datos persistentes en una base de datos MySQL o MariaDB (a elección del alumno) y se usarán las siguientes tablas:
 
     * Películas
     * Personajes
 
-### API REST
+## API REST
 
 El API debe ofrecer un CRUD completo sobre las colecciones: Películas y Personajes.
 
@@ -37,7 +37,7 @@ PERSONAJE: {
     description
 }
 
-### API Combate
+## API Combate
 
 Finalmente, implementar una serie de recursos virtuales que nos permitan simular combates entre los personajes.
 
@@ -51,6 +51,6 @@ Cada combate aplicará un factor aleatorio además de varias iteracciones de com
 
 Obviamente, tras un combate, al volver a consultar el GET, obtendremos el estado del personaje tras el combate.
 
-### Web de pruebas
+## Web de pruebas
 
 Implementar una sencilla web para probar el API, no es necesario que sea ‘bonita’, simplemente que ofrezca una serie de botones y formularios para poder probar el API cómodamente.
