@@ -27,6 +27,7 @@ PELICULA: {
     id,
     title,
     length,
+    sinopsis,
     year
 }
 
@@ -35,6 +36,20 @@ PERSONAJE: {
     name,
     description
 }
+
+### API Combate
+
+Finalmente, implementar una serie de recursos virtuales que nos permitan simular combates entre los personajes.
+
+Los combates serán definidos por el alumno (juego de Rol), y cada personaje almacenará una serie de atributos (magia, fuerza, poder, ...) a elección del alumno.
+
+Cada combate aplicará un factor aleatorio además de varias iteracciones de combate. Devolverá el estado final de cada personaje tras el combate.
+
+   * GET /combate/:idPersonaje - Obtener los atributos del personaje actuales
+   * POST /combate?p1=idPersonaje1&p2=idPersonaje2 - Realizar un nuevo combate entre ambos personajes
+   * PUT /combate/:idPersonaje - Poder cambiar atributos al personaje (curación); en el cuerpo del mensaje se enviarán los nuevos atributos
+
+Obviamente, tras un combate, al volver a consultar el GET, obtendremos el estado del personaje tras el combate.
 
 ### Web de pruebas
 
