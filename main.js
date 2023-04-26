@@ -108,6 +108,6 @@ app.delete('/peliculas/:pelicula_id/personajes/:personaje_id', async (req, res) 
 });
 
 // Iniciar el servidor
-app.listen(4033, () => {
-    console.log('Servidor iniciado en el puerto 4033');
+app.listen(3033, () => {
+    console.log('Servidor iniciado en el puerto 3033');
 });
