@@ -1,24 +1,28 @@
-# EJERCICIO - API Harry Potter
+# EJERCICIO: API REST - Harry Potter
+
+### Introducción
+
+El alumno implementará un API REST con Node.JS que complete la especificación indicada en el presente documento.
 
 ### Base de datos
 
-Colecciones (ver objetos para sus columnas):
-* Películas
-* Personajes
+El API almacenará los datos persistentes en una base de datos MySQL o MariaDB (a elección del alumno) y se usarán las siguientes tablas:
+
+    * Películas
+    * Personajes
 
 ### API REST
 
-Endpoints (todos con GET, POST, PUT y DELETE)
+El API debe ofrecer un CRUD completo sobre las colecciones:
 
-/peliculas 
-
+/peliculas
 /personajes
 
-/peliculas/:id
+Los métodos HTTP a utilizar deberán ser los adecuados para cada operación.
+Además, se ofrecerá la consulta en las colecciones:
 
-/personajes/:id
-
-/peliculas/:id/personajes
+/peliculas/:idPelicula/personajes - Mostrar los personajes de la película
+/personajes/:idPersonajes/peliculas - Mostrar las películas dónde sale el personaje
 
 Objetos:
 
@@ -31,9 +35,10 @@ PELICULA: {
 
 PERSONAJE: {
     id,
-    name
+    name,
+    description
 }
 
-### Web
+### Web de pruebas
 
-Implementar una sencilla web que nos permita interactuar con la API y modificar contenidos de la BBDD
+Implementar una sencilla web para probar el API, no es necesario que sea ‘bonita’, simplemente que ofrezca una serie de botones y formularios para poder probar el API cómodamente.
