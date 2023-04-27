@@ -20,4 +20,4 @@ app.get('/', (req, res, next) => {
 app.use('/peliculas', peliculas)
 app.use('/personajes', personajes)
 
-app.listen(3033)
+app.listen(3050)

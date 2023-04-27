@@ -31,6 +31,10 @@ function addPeliculas(peliculas) {
     dbPeliculas.push(peliculas)
 }
 
+function deletePeliculas(peliculas) {
+    dbPeliculas.pop(peliculas)
+}
+
 function getPeliculas() {
     return query('SELECT * FROM peliculas')
 }
@@ -44,5 +48,6 @@ module.exports = {
         all: getPeliculas,
         byId: getPelicula
     },
-    add: addPeliculas
+    add: addPeliculas,
+    delete: deletePeliculas
 }

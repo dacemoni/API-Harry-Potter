@@ -7,5 +7,6 @@ module.exports = {
         all: moduloPeliculas.get.all,
         byId: moduloPeliculas.get.byId
     },
-    add: moduloPeliculas.add
+    add: moduloPeliculas.add,
+    delete: moduloPeliculas.delete
 }
