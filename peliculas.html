@@ -26,7 +26,7 @@
     <div>
         <h2>Películas</h2>
         <button onclick="window.location.href='http://localhost:3050/peliculas'">Listado películas</button>
-        <form id="obtenerPeliculaForm" action="http://localhost:3050/peliculas/idPelicula" >
+        <form id="obtenerPeliculaForm" action="http://localhost:3050/peliculas/idPelicula">
             <label for="idPelicula">ID de la película:</label>
             <input type="text" id="idPelicula" name="idPelicula">
             <button type="submit">Obtener película</button>
@@ -34,7 +34,7 @@
 
         <script>
             // Agrega un controlador de eventos para el envío del formulario
-            document.getElementById('obtenerPeliculaForm').addEventListener('submit', function(event) {
+            document.getElementById('obtenerPeliculaForm').addEventListener('submit', function (event) {
                 // Evita que se envíe el formulario automáticamente
                 event.preventDefault();
 
@@ -57,6 +57,21 @@
             <label for="sinopsisPelicula">Resumen de la película:</label>
             <input type="text" id="sinopsisPelicula" name="sinopsisPelicula">
             <button type="submit">Agregar película</button>
+        </form>
+
+        <form id="eliminarPeliculaForm"> <!-- Falta poner la ruta que luego coge la api para eliminar la pelicula-->
+            <label for="titlePelicula">Título de la película:</label>
+            <select name="asignaturas" id="asignatura">
+                <option value="0">Harry Potter y la piedra filosofal</option>
+                <option value="1">Harry Potter y la cámara secreta</option>
+                <option value="2">Harry Potter y el prisionero de Azkaban</option>
+                <option value="3">Harry Potter y el cáliz de fuego</option>
+                <option value="4">Harry Potter y la Orden del Fénix</option>
+                <option value="5">Harry Potter y el misterio del príncipe</option>
+                <option value="6">Harry Potter y las reliquias de la muerte: parte 1</option>
+                <option value="7">Harry Potter y las reliquias de la muerte: parte 2</option>
+            </select>
+            <button type="submit">Eliminar película</button>
         </form>
     </div>
 
