@@ -15,9 +15,10 @@ app.use(bodyParser.json());
 const connection = await mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'password',
-    database: 'harry_potter_db'
+    password: '',
+    database: 'apiharrypotter'
 });
+
 
 // Obtener todas las películas
 app.get('/peliculas', async (req, res) => {

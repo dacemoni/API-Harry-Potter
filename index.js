@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false, limit: '1mb' }))
 app.use(bodyParser.json({ limit: '1mb' }))
 
 app.get('/', (req, res, next) => {
-    res.send("HOLA")
+    res.send("Hola estas usando la api de harry potter ")
 })
 
 app.use('/peliculas', peliculas)
