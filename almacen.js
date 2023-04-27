@@ -1,3 +1,15 @@
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="peliculas.html">Peliculas</a></li>
+
+        <li><a href="http://localhost:3050/peliculas">Peliculas</a></li>
+        <li><a href="http://localhost:3050/personajes">Personajes</a></li>
+        <li><a href="http://localhost:3050/combate">Combate</a></li>
+    </ul>
+</nav>
+
+
 'use strict'
 
 const express = require('express');

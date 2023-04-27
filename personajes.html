@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Personajes - Harry Potter API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Harry Potter API</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="peliculas.html">Peliculas</a></li>
+        <li><a href="personajes.html">Personajes</a></li>
+        <li><a href="combate.html">Combate</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Bienvenido a la API de Harry Potter</h2>
+    <div>
+        <h2>Personajes</h2>
+        <button onclick="window.location.href='http://localhost:3050/personajes'">Listado personajes</button>
+        <form id="obtenerPersonajeForm" action="http://localhost:3050/personajes/idPersonaje" >
+            <label for="idPersonaje">ID del personaje:</label>
+            <input type="text" id="idPersonaje" name="idPersonaje">
+            <button type="submit">Obtener personaje</button>
+        </form>
+
+        <script>
+            // Agrega un controlador de eventos para el envío del formulario
+            document.getElementById('obtenerPersonajeForm').addEventListener('submit', function(event) {
+                // Evita que se envíe el formulario automáticamente
+                event.preventDefault();
+
+                // Captura el valor del campo de entrada idPersonaje
+                const idPersonaje = document.getElementById('idPersonaje').value;
+
+                // Modifica la acción del formulario para incluir el valor de idPersonaje
+                const formAction = `http://localhost:3050/personajes/${idPersonaje}`;
+                document.getElementById('obtenerPersonajeForm').action = formAction;
+
+                // Envía el formulario
+                this.submit();
+            });
+        </script>
+
+        <form id="agregarPersonajeForm">
+            <label for="nombrePersonaje">Nombre del personaje:</label>
+            <input type="text" id="nombrePersonaje" name="nombrePersonaje">
+            <br>
+            <label for="descriptionPersonaje">Descripción del personaje:</label>
+            <input type="text" id="descriptionPersonaje" name="descriptionPersonaje">
+            <button type="submit">Agregar personaje</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2023 Harry Potter API</p>
+</footer>
+
+</body>
+</html>

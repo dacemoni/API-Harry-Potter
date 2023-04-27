@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Peliculas - Harry Potter API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Harry Potter API</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="peliculas.html">Peliculas</a></li>
+        <li><a href="personajes.html">Personajes</a></li>
+        <li><a href="combate.html">Combate</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Bienvenido a la API de Harry Potter</h2>
+    <div>
+        <h2>Películas</h2>
+        <button onclick="window.location.href='http://localhost:3050/peliculas'">Listado películas</button>
+        <form id="obtenerPeliculaForm" action="http://localhost:3050/peliculas/idPelicula" >
+            <label for="idPelicula">ID de la película:</label>
+            <input type="text" id="idPelicula" name="idPelicula">
+            <button type="submit">Obtener película</button>
+        </form>
+
+        <script>
+            // Agrega un controlador de eventos para el envío del formulario
+            document.getElementById('obtenerPeliculaForm').addEventListener('submit', function(event) {
+                // Evita que se envíe el formulario automáticamente
+                event.preventDefault();
+
+                // Captura el valor del campo de entrada idPersonaje
+                const idPelicula = document.getElementById('idPelicula').value;
+
+                // Modifica la acción del formulario para incluir el valor de idPersonaje
+                const formAction = `http://localhost:3050/peliculas/${idPelicula}`;
+                document.getElementById('obtenerPeliculaForm').action = formAction;
+
+                // Envía el formulario
+                this.submit();
+            });
+        </script>
+
+        <form id="agregarPeliculaForm">
+            <label for="titlePelicula">Título de la película:</label>
+            <input type="text" id="titlePelicula" name="titlePelicula">
+            <br>
+            <label for="sinopsisPelicula">Resumen de la película:</label>
+            <input type="text" id="sinopsisPelicula" name="sinopsisPelicula">
+            <button type="submit">Agregar película</button>
+        </form>
+    </div>
+
+</main>
+<footer>
+    <p>&copy; 2023 Harry Potter API</p>
+</footer>
+
+</body>
+</html>
