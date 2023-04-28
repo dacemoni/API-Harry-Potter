@@ -50,6 +50,36 @@
             });
         </script>
 
+        <form id="obtenerPersonajePeliculaForm" action="http://localhost:3050/peliculas/personajes/idPelicula">
+            <label for="idPelicula">ID de la película:</label>
+            <input type="text" id="idPelicula" name="idPelicula" placeholder="Entre 1-8">
+            <button type="submit">Obtener personajes que aparecen en la película</button>
+        </form>
+
+        <script>
+            // Agrega un controlador de eventos para el envío del formulario
+            document.getElementById('obtenerPersonajePeliculaForm').addEventListener('submit', function (event) {
+                // Evita que se envíe el formulario automáticamente
+                event.preventDefault();
+
+                // Captura el valor del campo de entrada idPersonaje
+                const idPelicula = document.getElementById('idPelicula').value;
+
+                // Construye la URL sin el parámetro idPersonaje
+                const formAction = `http://localhost:3050/peliculas/personajes/${idPelicula}`;
+                const form = document.getElementById('obtenerPersonajePeliculaForm');
+                form.setAttribute('action', formAction);
+
+                // Elimina el parámetro idPersonaje del formulario antes de enviarlo
+                const idPeliculaInput = document.getElementById('idPelicula');
+                idPeliculaInput.removeAttribute('name');
+                idPeliculaInput.removeAttribute('value');
+
+                // Envía el formulario
+                form.submit();
+            });
+        </script>
+
         <form id="agregarPersonajeForm">
             <label for="nombrePersonaje">Nombre del personaje:</label>
             <input type="text" id="nombrePersonaje" name="nombrePersonaje">
@@ -58,10 +88,17 @@
             <input type="text" id="descriptionPersonaje" name="descriptionPersonaje">
             <button type="submit">Agregar personaje</button>
         </form>
+
+        <form id="eliminarPersonajeForm"> <!-- Falta poner la ruta que luego coge la api para eliminar la pelicula-->
+            <label for="nombrePersonaje">Nombre del personaje:</label>
+            <input type="text" id="nombrePersonajeBorrar" name="nombrePersonaje" placeholder="EN MAYUSCULAS"></input>
+            <button type="submit">Eliminar película</button>
+        </form>
+
     </div>
 </main>
 <footer>
-    <p>&copy; 2023 Harry Potter API</p>
+    <p>&copy; 2023 Harry Potter API - Creada por David César</p>
 </footer>
 
 </body>

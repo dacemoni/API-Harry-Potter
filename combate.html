@@ -8,23 +8,32 @@
 <body>
 
 <header>
-  <h1>Harry Potter API</h1>
+    <h1>Harry Potter API</h1>
 </header>
 
 <nav>
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="peliculas.html">Peliculas</a></li>
-    <li><a href="personajes.html">Personajes</a></li>
-    <li><a href="combate.html">Combate</a></li>
-  </ul>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="peliculas.html">Peliculas</a></li>
+        <li><a href="personajes.html">Personajes</a></li>
+        <li><a href="combate.html">Combate</a></li>
+    </ul>
 </nav>
 
 <main>
-  <h2>Combate</h2>
+    <h2>Combate</h2>
+    <form id="peleaPersonajesForm" action="http://localhost:3050/combate?p1=idPersonaje1&p2=idPersonaje2">
+        <label for="idPersonaje1">ID del personaje 1:</label>
+        <input type="text" id="idPersonaje1" name="idPersonaje1">
+        <br>
+        <label for="idPersonaje2">ID del personaje 2:</label>
+        <input type="text" id="idPersonaje2" name="idPersonaje2">
+        <br>
+        <button type="submit">Combatir</button>
+    </form>
 </main>
 <footer>
-  <p>&copy; 2023 Harry Potter API</p>
+    <p>&copy; 2023 Harry Potter API - Creada por David César</p>
 </footer>
 </body>
 </html>

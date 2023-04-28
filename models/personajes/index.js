@@ -31,6 +31,10 @@ function addPersonajes(personajes) {
     dbPersonajes.push(personajes)
 }
 
+function deletePersonajes(peliculas) {
+    dbPersonajes.pop(peliculas)
+}
+
 function getPersonajes() {
     return query('SELECT * FROM personajes')
 }
@@ -39,10 +43,16 @@ function getPersonaje(id) {
     return query('SELECT * FROM personajes WHERE id = ?', [id])
 }
 
+function getPersonajePelicula(id) {
+    return query('SELECT * FROM pelicula_personajes WHERE idPelicula = ?', [id])
+}
+
 module.exports = {
     get: {
         all: getPersonajes,
-        byId: getPersonaje
+        byId: getPersonaje,
+        byPeliculas: getPersonajePelicula
     },
-    add: addPersonajes
+    add: addPersonajes,
+    delete: deletePersonajes
 }

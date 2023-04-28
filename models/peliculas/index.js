@@ -43,10 +43,15 @@ function getPelicula(id) {
     return query('SELECT * FROM peliculas WHERE id = ?', [id])
 }
 
+function getPeliculaPersonaje(id) {
+    return query('SELECT * FROM pelicula_personajes WHERE idPersonaje = ?', [id])
+}
+
 module.exports = {
     get: {
         all: getPeliculas,
-        byId: getPelicula
+        byId: getPelicula,
+        byPersonajes: getPeliculaPersonaje
     },
     add: addPeliculas,
     delete: deletePeliculas

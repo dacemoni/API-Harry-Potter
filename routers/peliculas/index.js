@@ -2,6 +2,7 @@
 
 const router = require('express').Router()
 const controladorPeliculas = require('../../controllers/peliculas')
+const controladorPersonajes = require("../../controllers/personajes");
 
 router.get('/', (req, res, next) => {
     controladorPeliculas.get.all()
@@ -12,6 +13,12 @@ router.get('/', (req, res, next) => {
 router.get('/:idPelicula', (req, res, next) => {
     controladorPeliculas.get.byId(req.params.idPelicula)
         .then(peliculas => res.send(peliculas))
+        .catch(err => res.send('ERROR'))
+})
+
+router.get('/personajes/:idPelicula', (req, res, next) => {
+    controladorPersonajes.get.byPeliculas(req.params.idPelicula)
+        .then(personajes => res.send(personajes))
         .catch(err => res.send('ERROR'))
 })
 

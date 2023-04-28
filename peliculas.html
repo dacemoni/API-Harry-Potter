@@ -50,6 +50,36 @@
             });
         </script>
 
+        <form id="obtenerPeliculaPersonajeForm" action="http://localhost:3050/personajes/peliculas/idPersonaje">
+            <label for="idPersonaje">ID del personaje:</label>
+            <input type="text" id="idPersonaje" name="idPersonaje" placeholder="Entre 1-50">
+            <button type="submit">Obtener películas en las que aparece el personaje</button>
+        </form>
+
+        <script>
+            // Agrega un controlador de eventos para el envío del formulario
+            document.getElementById('obtenerPeliculaPersonajeForm').addEventListener('submit', function (event) {
+                // Evita que se envíe el formulario automáticamente
+                event.preventDefault();
+
+                // Captura el valor del campo de entrada idPersonaje
+                const idPersonaje = document.getElementById('idPersonaje').value;
+
+                // Construye la URL sin el parámetro idPersonaje
+                const formAction = `http://localhost:3050/personajes/peliculas/${idPersonaje}`;
+                const form = document.getElementById('obtenerPeliculaPersonajeForm');
+                form.setAttribute('action', formAction);
+
+                // Elimina el parámetro idPersonaje del formulario antes de enviarlo
+                const idPersonajeInput = document.getElementById('idPersonaje');
+                idPersonajeInput.removeAttribute('name');
+                idPersonajeInput.removeAttribute('value');
+
+                // Envía el formulario
+                form.submit();
+            });
+        </script>
+
         <form id="agregarPeliculaForm">
             <label for="titlePelicula">Título de la película:</label>
             <input type="text" id="titlePelicula" name="titlePelicula">
@@ -77,7 +107,7 @@
 
 </main>
 <footer>
-    <p>&copy; 2023 Harry Potter API</p>
+    <p>&copy; 2023 Harry Potter API - Creada por David César</p>
 </footer>
 
 </body>
