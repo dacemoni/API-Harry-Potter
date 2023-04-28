@@ -4,19 +4,22 @@ const router = require('express').Router()
 const controladorCombate = require('../../controllers/combate')
 
 
-
+/*
 router.get('/', (req, res, next) => {
     controladorCombate.get.combate()
         .then(personajes => res.send(personajes))
         .catch(err => res.send('ERROR'))
 })
+*/
 
-/*
-app.get('/combate', (req, res) => {
-    res.write(" Me has pasado el nombre: " + req.query.nombre)
-    res.write(" Me has pasado la asignatura: " + req.query.asignatura)
+
+
+router.get('/', (req, res) => {
+    res.write(" Id del personaje 1: " + req.query.idPersonaje1)
+    res.write(" Id del personaje 2: " + req.query.idPersonaje2)
+    res.write(" El ganador del combate es: " + req.query.idPersonaje1)
     res.end()
 })
-*/
+
 
 module.exports = router
