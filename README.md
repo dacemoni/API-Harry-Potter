@@ -1,5 +1,9 @@
 # EJERCICIO: API REST - Harry Potter
 
+Ejercicio resuelto por: David César Moro Nieto
+
+Repositorio de GitHub: https://github.com/dacemoni/API-Harry-Potter
+
 ## Introducción
 
 El alumno implementará un API REST con Node.JS que complete la especificación indicada en el presente documento.
