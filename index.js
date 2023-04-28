@@ -2,6 +2,7 @@
 
 const peliculas = require('./routers/peliculas')
 const personajes = require('./routers/personajes')
+const combate = require('./routers/combate')
 
 const express = require('express')
 const app = express()
@@ -19,5 +20,6 @@ app.get('/', (req, res, next) => {
 
 app.use('/peliculas', peliculas)
 app.use('/personajes', personajes)
+app.use('/combate', combate)
 
 app.listen(3050)
